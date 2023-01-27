@@ -10,7 +10,6 @@ def click_phone_login():
     # init selenium
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
     driver.implicitly_wait(3)
-    actions = ActionChains(driver)
      # Variables   
     URL_tinder = "https://tinder.com/"
     # logging in 
@@ -37,7 +36,7 @@ def click_phone_login():
             phone_login_button = driver.find_element(By.XPATH,'//div[text()="Log in with phone number"]' )
             phone_login_button.click() 
         except: 
-            print("Login button 404")
+            print("Phone button 404")
         else: 
             phone_button_found = True
 
